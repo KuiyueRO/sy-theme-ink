@@ -1,3 +1,119 @@
 :root {
-    --b3-theme-primary: #d23f31;
+    /* 主色 */
+    --b3-theme-primary: #3575f0;
+    --b3-theme-primary-light: rgba(53, 117, 240, 0.54);
+    --b3-theme-primary-lighter: rgba(53, 117, 240, 0.38);
+    --b3-theme-primary-lightest: rgba(53, 117, 240, 0.12);
+    --b3-theme-secondary: #f3a92f;
+    --b3-theme-background: #ffffff;
+    --b3-theme-background-light: #ffffff;
+    --b3-theme-surface: #ffffff;
+    --b3-theme-surface-light: rgb(255, 255, 255);
+    --b3-theme-surface-lighter: #000000;
+    --b3-theme-background-light: #ffffff;
+    --b3-theme-error: #d23f31;
+
+    /* 文字颜色 */
+    --b3-theme-on-primary: #ffffff;
+    --b3-theme-on-secondary: #ffffff;
+    --b3-theme-on-background: #000000;
+    --b3-theme-on-surface: #000000;
+    --b3-theme-on-surface-light: rgb(0, 0, 0);
+    --b3-theme-on-error: #ffffff;
+
+    /* 顶部工具栏 */
+    --b3-toolbar-background: var(--b3-theme-surface);
+    --b3-toolbar-blur-background: #ffffff;
+    --b3-toolbar-color: var(--b3-theme-on-surface);
+    --b3-toolbar-hover: var(--b3-theme-background-light);
+    --b3-toolbar-left-mac: 69px;
+
+    /* 列表 */
+    --b3-list-hover: rgba(255, 255, 255, 0);
+    --b3-list-icon-hover: rgb(0, 0, 0);
+
+    /* 滚动条 */
+    --b3-scroll-color: rgb(0 0 0);
+
+    /* 阴影 */
+    --b3-point-shadow: 0 0 0px 1.25px #000000, 0 0 2px 0px rgba(0, 0, 0, 0.2);
+    --b3-dialog-shadow: 0 2px 2px rgb(0, 0, 0);
+    --b3-button-shadow: 0px 5px 5px -2px rgba(255, 255, 255, 0.2), 0px 8px 10px 1px rgb(0 0 0 / 0.14), 0px 2px 14px 2px rgb(0 0 0 / 0.12);
+}
+
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus),
+.b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
+    background-color: var(--b3-list-hover);
+    box-shadow: 2px solid var(--b3-theme-surface-lighter);
+}
+
+.block__icon:hover:not([disabled]):not(.ft__primary),
+.block__icon--active {
+
+    box-shadow: var(--b3-point-shadow);
+}
+
+.dock {
+    background-color: var(--b3-theme-surface);
+}
+
+.dock#dockLeft {
+    border-right: 2px solid var(--b3-border-color)
+}
+
+.dock#dockRight {
+    border-left: 2px solid var(--b3-border-color)
+}
+
+.dock#dockBottom {
+    border-top: 2px solid var(--b3-border-color)
+}
+
+.layout-tab-container {
+    background-color: var(--b3-theme-surface);
+}
+
+.toolbar {
+    border-bottom: 2px solid var(--b3-border-color);
+}
+
+.layout__resize--lr:after {
+    width: 2px;
+}
+
+.toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover,
+.toolbar__item--active {
+    background-color: var(--b3-toolbar-hover);
+    color: var(--b3-theme-on-background);
+    box-shadow: var(--b3-point-shadow);
+}
+
+.b3-dialog__container {
+    border: 2px solid var(--b3-theme-surface-lighter)
+}
+
+.dock__item:hover,
+.dock__item--active {
+    box-shadow: var(--b3-point-shadow);
+}
+
+.layout--float.layout__dockl {
+    border: 2px solid var(--b3-border-color);
+}
+
+.layout--float.layout__dockr {
+    border: 2px solid var(--b3-border-color);
+}
+
+.b3-menu__item--current {
+    box-shadow: var(--b3-point-shadow);
+    z-index: 9;
+}
+
+.layout-tab-container {
+    box-shadow: var(--b3-point-shadow);
+}
+
+.protyle-breadcrumb {
+    border-bottom: 1px dashed var(--b3-border-color);
 }
