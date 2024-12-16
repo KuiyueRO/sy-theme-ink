@@ -1,16 +1,16 @@
 {
-  "name": "theme-sample",
-  "author": "Vanessa",
-  "url": "https://github.com/siyuan-note/theme-sample",
+  "name": "ink-theme",
+  "author": "ACai",
+  "url": "https://github.com/KuiyueRO/sy-theme-ink",
   "version": "0.0.3",
   "minAppVersion": "2.8.8",
   "displayName": {
-    "default": "Theme Sample",
-    "zh_CN": "主题示例"
+    "default": "Ink Theme",
+    "zh_CN": "墨滴"
   },
   "description": {
-    "default": "This is a theme sample",
-    "zh_CN": "这是一个主题示例"
+    "default": "A E-Ink theme for SiYuan Note",
+    "zh_CN": "一个用于思源笔记的墨水屏主题"
   },
   "readme": {
     "default": "README.md",
