@@ -1,8 +1,8 @@
 {
-  "name": "ink-theme",
+  "name": "sy-theme-ink",
   "author": "ACai",
   "url": "https://github.com/KuiyueRO/sy-theme-ink",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "minAppVersion": "2.8.8",
   "displayName": {
     "default": "Ink Theme",
