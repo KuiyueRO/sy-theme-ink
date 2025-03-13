@@ -1,14 +1,42 @@
 /**
  * 思源笔记翻页按钮脚本
  * 在编辑区右下角添加上下翻页按钮，仅对当前激活的标签页生效
- * 针对墨水屏优化，无动画效果
+ * 针对墨水屏优化，禁用所有动画效果
  */
 (()=>{
-    // 创建翻页按钮的样式
+    // 创建翻页按钮的样式和全局禁用动画的样式
     const addStyle = () => {
         const style = document.createElement('style');
         style.id = 'page-scroll-buttons-style';
         style.textContent = `
+            /* 全局禁用所有动画和过渡效果 */
+            * {
+                transition: none !important;
+                animation: none !important;
+                animation-delay: 0s !important;
+                animation-duration: 0s !important;
+                transition-property: none !important;
+                transition-duration: 0s !important;
+                scroll-behavior: auto !important;
+            }
+            
+            /* 禁用特定元素的动画效果 */
+            .b3-dialog--open,
+            .b3-menu--open,
+            .protyle-wysiwyg .render-node,
+            .protyle-wysiwyg [data-node-id],
+            .b3-typographer,
+            .protyle-background__icon {
+                animation: none !important;
+                transition: none !important;
+            }
+            
+            /* 禁用滚动条平滑效果 */
+            html {
+                scroll-behavior: auto !important;
+            }
+            
+            /* 翻页按钮样式 */
             .page-scroll-buttons {
                 position: fixed;
                 right: 20px;
