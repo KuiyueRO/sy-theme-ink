@@ -1,9 +1,9 @@
 :root {
     /* 主色 */
-    --b3-theme-primary: #3575f0;
-    --b3-theme-primary-light: rgba(53, 117, 240, 0.54);
-    --b3-theme-primary-lighter: rgba(53, 117, 240, 0.38);
-    --b3-theme-primary-lightest: rgba(53, 117, 240, 0.12);
+    --b3-theme-primary: #ffffff;
+    --b3-theme-primary-light: rgba(255, 255, 255, 0);
+    --b3-theme-primary-lighter: rgba(0, 0, 0, 0);
+    --b3-theme-primary-lightest: rgb(0, 0, 0);
     --b3-theme-secondary: #f3a92f;
     --b3-theme-background: #ffffff;
     --b3-theme-background-light: #ffffff;
@@ -131,6 +131,10 @@
 
 .config__tab-container .b3-label:not(.b3-label--inner) {
     box-shadow: none;
+}
+
+.b3-text-field:not(.b3-text-field--text):focus, .pcr-app .pcr-interaction .pcr-result:not(.b3-text-field--text):focus {
+    box-shadow: inset 0 0 0 1px var(--b3-theme-primary),0 0 0 3px var(--b3-theme-primary-lightest);
 }
 
 /* 墨水屏优化样式 - 从theme.js移动过来的 */
