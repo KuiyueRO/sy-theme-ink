@@ -30,15 +30,20 @@
 
     /* 列表 */
     --b3-list-hover: rgba(255, 255, 255, 0);
-    --b3-list-icon-hover: rgb(0, 0, 0);
+    --b3-list-icon-hover: rgb(255, 255, 255);
 
     /* 滚动条 */
     --b3-scroll-color: rgb(0 0 0);
 
+    /*倒角*/
+    --b3-border-radius: 0px;
+    --b3-border-radius-s: 0px;
+    --b3-border-radius-b: 0px;
+
     /* 阴影 */
     --b3-point-shadow: 0 0 0px 1.25px #000000, 0 0 2px 0px rgba(0, 0, 0, 0.2);
-    --b3-dialog-shadow: 0 2px 2px rgb(0, 0, 0);
-    --b3-button-shadow: 0px 5px 5px -2px rgba(255, 255, 255, 0.2), 0px 8px 10px 1px rgb(0 0 0 / 0.14), 0px 2px 14px 2px rgb(0 0 0 / 0.12);
+    --b3-dialog-shadow: none;
+    --b3-button-shadow: none;
 }
 
 .b3-list--background .b3-list-item:hover:not(.b3-list-item--focus),
@@ -116,4 +121,8 @@
 
 .protyle-breadcrumb {
     border-bottom: 1px dashed var(--b3-border-color);
+}
+
+.config__tab-container .b3-label:not(.b3-label--inner) {
+    box-shadow: none;
 }
