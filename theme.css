@@ -196,3 +196,8 @@ html {
     height: 20px;
 }
 
+/*选择*/
+.protyle-wysiwyg--select::after,.protyle-wysiwyg--hl::after,table+.protyle-action__table .table__select {
+    background-color: unset;
+    box-shadow: 0px 0px 0px 1px #000000;
+}
