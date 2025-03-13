@@ -1,6 +1,7 @@
 /**
  * 思源笔记翻页按钮脚本
  * 在编辑区右下角添加上下翻页按钮，仅对当前激活的标签页生效
+ * 针对墨水屏优化，无动画效果
  */
 (()=>{
     // 创建翻页按钮的样式
@@ -29,11 +30,9 @@
                 justify-content: center;
                 cursor: pointer;
                 box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-                transition: all 0.2s ease;
             }
             .page-scroll-button:hover {
                 background-color: var(--b3-theme-primary-lightest);
-                transform: translateY(-2px);
             }
             .page-scroll-button svg {
                 width: 20px;
@@ -95,10 +94,7 @@
                 if (protyleContent) {
                     const currentScroll = protyleContent.scrollTop;
                     const viewportHeight = protyleContent.clientHeight;
-                    protyleContent.scrollTo({
-                        top: currentScroll - viewportHeight,
-                        behavior: 'smooth'
-                    });
+                    protyleContent.scrollTop = currentScroll - viewportHeight;
                 }
             }
         });
@@ -111,10 +107,7 @@
                 if (protyleContent) {
                     const currentScroll = protyleContent.scrollTop;
                     const viewportHeight = protyleContent.clientHeight;
-                    protyleContent.scrollTo({
-                        top: currentScroll + viewportHeight,
-                        behavior: 'smooth'
-                    });
+                    protyleContent.scrollTop = currentScroll + viewportHeight;
                 }
             }
         });
