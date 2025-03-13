@@ -14,6 +14,9 @@
     --b3-theme-error: #d23f31;
     --b3-mask-background: rgba(255, 255, 255, 0);
 
+    /*表格*/
+    --b3-table-even-background: #ffffff;
+
     /* 文字颜色 */
     --b3-theme-on-primary: #ffffff;
     --b3-theme-on-secondary: #ffffff;
@@ -129,3 +132,4 @@
 .config__tab-container .b3-label:not(.b3-label--inner) {
     box-shadow: none;
 }
+
