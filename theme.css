@@ -41,15 +41,16 @@
     --b3-border-radius-b: 0px;
 
     /* 阴影 */
-    --b3-point-shadow: 0 0 0px 1.25px #000000, 0 0 2px 0px rgba(0, 0, 0, 0.2);
+    --b3-point-shadow: 0 0 0px 1px #000000;
     --b3-dialog-shadow: none;
     --b3-button-shadow: none;
+    --b3-tooltips-shadow: none;
 }
 
 .b3-list--background .b3-list-item:hover:not(.b3-list-item--focus),
 .b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
     background-color: var(--b3-list-hover);
-    box-shadow: 2px solid var(--b3-theme-surface-lighter);
+    box-shadow: 1px solid var(--b3-theme-surface-lighter);
 }
 
 .block__icon:hover:not([disabled]):not(.ft__primary),
@@ -63,15 +64,19 @@
 }
 
 .dock#dockLeft {
-    border-right: 2px solid var(--b3-border-color)
+    border-right: 1px solid var(--b3-border-color)
 }
 
 .dock#dockRight {
-    border-left: 2px solid var(--b3-border-color)
+    border-left: 1px solid var(--b3-border-color)
 }
 
 .dock#dockBottom {
-    border-top: 2px solid var(--b3-border-color)
+    border-top: 1px solid var(--b3-border-color)
+}
+
+.status {
+    border-top: 1px solid var(--b3-border-color);
 }
 
 .layout-tab-container {
@@ -79,22 +84,22 @@
 }
 
 .toolbar {
-    border-bottom: 2px solid var(--b3-border-color);
+    border-bottom: 1px solid var(--b3-border-color);
 }
 
 .layout__resize--lr:after {
-    width: 2px;
+    width: 1px;
 }
 
 .toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover,
 .toolbar__item--active {
     background-color: var(--b3-toolbar-hover);
     color: var(--b3-theme-on-background);
-    box-shadow: var(--b3-point-shadow);
+    box-shadow: none;
 }
 
 .b3-dialog__container {
-    border: 2px solid var(--b3-theme-surface-lighter)
+    border: 1px solid var(--b3-theme-surface-lighter)
 }
 
 .dock__item:hover,
@@ -102,12 +107,9 @@
     box-shadow: var(--b3-point-shadow);
 }
 
-.layout--float.layout__dockl {
-    border: 2px solid var(--b3-border-color);
-}
-
-.layout--float.layout__dockr {
-    border: 2px solid var(--b3-border-color);
+.layout--float.layout__dockl ,.layout--float.layout__dockr {
+    border: 1px solid var(--b3-border-color);
+    box-shadow: none;
 }
 
 .b3-menu__item--current {
