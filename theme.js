@@ -4,72 +4,6 @@
  * 针对墨水屏优化，禁用所有动画效果
  */
 (()=>{
-    // 创建翻页按钮的样式和全局禁用动画的样式
-    const addStyle = () => {
-        const style = document.createElement('style');
-        style.id = 'page-scroll-buttons-style';
-        style.textContent = `
-            /* 全局禁用所有动画和过渡效果 */
-            * {
-                transition: none !important;
-                animation: none !important;
-                animation-delay: 0s !important;
-                animation-duration: 0s !important;
-                transition-property: none !important;
-                transition-duration: 0s !important;
-                scroll-behavior: auto !important;
-            }
-            
-            /* 禁用特定元素的动画效果 */
-            .b3-dialog--open,
-            .b3-menu--open,
-            .protyle-wysiwyg .render-node,
-            .protyle-wysiwyg [data-node-id],
-            .b3-typographer,
-            .protyle-background__icon {
-                animation: none !important;
-                transition: none !important;
-            }
-            
-            /* 禁用滚动条平滑效果 */
-            html {
-                scroll-behavior: auto !important;
-            }
-            
-            /* 翻页按钮样式 */
-            .page-scroll-buttons {
-                position: fixed;
-                right: 20px;
-                bottom: 20px;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                z-index: 999;
-            }
-            .page-scroll-button {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                background-color: var(--b3-theme-background);
-                border: 1px solid var(--b3-border-color);
-                color: var(--b3-theme-on-surface);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            }
-            .page-scroll-button:hover {
-                background-color: var(--b3-theme-primary-lightest);
-            }
-            .page-scroll-button svg {
-                width: 20px;
-                height: 20px;
-            }
-        `;
-        document.head.appendChild(style);
-    };
-
     // 创建并添加按钮到DOM
     const addButtons = () => {
         // 创建按钮容器
@@ -163,7 +97,6 @@
 
     // 初始化函数
     const init = () => {
-        addStyle();
         addButtons();
         setupScrollEvents();
     };
